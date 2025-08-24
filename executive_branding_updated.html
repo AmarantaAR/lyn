@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Your Narrative | Transform Into An Industry Authority</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #1e3a47;
+            overflow-x: hidden;
+            background: #f5f2ed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Urgency Bar */
+        .urgency-bar {
+            background: linear-gradient(45deg, #8b6914, #a67c1a);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+
+        .spots-left {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 3px 8px;
+            border-radius: 12px;
+            margin-left: 8px;
+            font-weight: 700;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(245, 242, 237, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(30, 58, 71, 0.1);
+            transition: all 0.3s ease;
+            margin-top: 44px; /* Account for urgency bar */
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3a47;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #1e3a47;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 24px;
+            height: 24px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20 80 Q25 70 30 60 Q35 50 40 40 Q45 30 50 20' stroke='%23f5f2ed' stroke-width='3' fill='none'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #1e3a47;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #8b6914;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #8b6914;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 160px 0 80px; /* Extra padding for urgency bar + header */
+            background: linear-gradient(135deg, #f5f2ed 0%, #ede8df 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M80 10 Q75 15 70 20 Q65 25 60 35 Q55 45 50 55 Q45 65 40 75 Q35 85 30 95' stroke='%231e3a47' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3C/svg%3E") repeat-y;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #1e3a47;
+            font-family: 'Georgia', serif;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-text h1 .accent {
+            color: #8b6914;
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: #8b6914;
+            font-weight: 600;
+            margin-bottom: 25px;
+            animation: fadeInUp 1s ease 0.1s both;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #4a5d6b;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .guarantee-note {
+            font-size: 1rem;
+            color: #8b6914;
+            font-weight: 600;
+            margin-bottom: 35px;
+            padding: 15px 20px;
+            background: rgba(139, 105, 20, 0.1);
+            border-left: 4px solid #8b6914;
+            border-radius: 5px;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 45px;
+            background: #1e3a47;
+            color: #f5f2ed;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(30, 58, 71, 0.2);
+            animation: fadeInUp 1s ease 0.4s both;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(245, 242, 237, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(30, 58, 71, 0.3);
+            background: #2a4a5a;
+        }
+
+        .risk-free {
+            font-size: 0.9rem;
+            color: #4a5d6b;
+            margin-top: 15px;
+            font-style: italic;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .hero-visual {
+            position: relative;
+            animation: fadeIn 1.5s ease 0.5s both;
+            text-align: center;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 25px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(30, 58, 71, 0.1);
+            box-shadow: 0 5px 20px rgba(30, 58, 71, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(45deg, #1e3a47, #8b6914);
+            border-radius: 10px 10px 0 0;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(30, 58, 71, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1e3a47;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #4a5d6b;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Trust Indicators */
+        .trust-section {
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.6);
+            text-align: center;
+        }
+
+        .trust-title {
+            font-size: 1.1rem;
+            color: #4a5d6b;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            font-weight: 600;
+            color: #1e3a47;
+            font-size: 1rem;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .trust-item:hover {
+            opacity: 1;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1e3a47;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: #4a5d6b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.5s ease;
+            padding: 0 20px;
+        }
+
+        .review-card {
+            min-width: 320px;
+            max-width: 320px;
+            padding: 30px;
+            background: #f5f2ed;
+            border-radius: 15px;
+            border: 2px solid rgba(30, 58, 71, 0.1);
+            box-shadow: 0 10px 30px rgba(30, 58, 71, 0.1);
+            flex-shrink: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #8b6914, #1e3a47);
+            border-radius: 15px 15px 0 0;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(30, 58, 71, 0.2);
+        }
+
+        .review-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #1e3a47;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #1e3a47;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f5f2ed;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .author-info h4 {
+            color: #1e3a47;
+            font-weight: 600;
+            margin-bottom: 3px;
+            font-size: 1rem;
+        }
+
+        .author-info p {
+            color: #4a5d6b;
+            font-size: 0.9rem;
+        }
+
+        .stars {
+            color: #8b6914;
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(30, 58, 71, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #1e3a47;
+            transform: scale(1.2);
+        }
+
+        /* Process Section */
+        .process {
+            padding: 100px 0;
+            background: #f5f2ed;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .process-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: #ffffff;
+            border-radius: 15px;
+            border: 2px solid rgba(30, 58, 71, 0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(30, 58, 71, 0.08);
+            position: relative;
+        }
+
+        .process-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #1e3a47, #8b6914);
+            border-radius: 15px 15px 0 0;
+        }
+
+        .process-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(30, 58, 71, 0.15);
+        }
+
+        .process-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background: linear-gradient(45deg, #1e3a47, #2a4a5a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 10px 30px rgba(30, 58, 71, 0.2);
+        }
+
+        .process-card h3 {
+            color: #1e3a47;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .process-card p {
+            color: #4a5d6b;
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-card {
+            background: #f5f2ed;
+            border-radius: 15px;
+            padding: 40px 30px;
+            border: 2px solid rgba(30, 58, 71, 0.1);
+            position: relative;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(30, 58, 71, 0.1);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(30, 58, 71, 0.15);
+        }
+
+        .pricing-card.featured {
+            border: 3px solid #8b6914;
+            transform: scale(1.05);
+            background: #fefdf9;
+            box-shadow: 0 20px 60px rgba(139, 105, 20, 0.2);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #8b6914, #a67c1a);
+            color: #f5f2ed;
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .limited-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(220, 38, 38, 0.9);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        .pricing-header h3 {
+            color: #1e3a47;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-family: 'Georgia', serif;
+        }
+
+        .pricing-subtitle {
+            color: #4a5d6b;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .price {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1e3a47;
+            margin-bottom: 8px;
+        }
+
+        .original-price {
+            font-size: 1.2rem;
+            color: #999;
+            text-decoration: line-through;
+            margin-bottom: 5px;
+        }
+
+        .price-note {
+            color: #4a5d6b;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin-bottom: 35px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            color: #1e3a47;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .feature-bullet {
+            color: #8b6914;
+            font-size: 1.2rem;
+            min-width: 20px;
+            font-weight: bold;
+        }
+
+        .bonus-feature {
+            background: rgba(139, 105, 20, 0.1);
+            margin: 20px -15px;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #8b6914;
+        }
+
+        .bonus-feature .feature {
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        .pricing-cta {
+            display: inline-block;
+            padding: 18px 40px;
+            background: rgba(30, 58, 71, 0.1);
+            border: 2px solid rgba(30, 58, 71, 0.2);
+            color: #1e3a47;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            width: 85%;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-cta:hover {
+            background: rgba(30, 58, 71, 0.15);
+            border-color: #1e3a47;
+            transform: translateY(-2px);
+        }
+
+        .featured-cta {
+            background: #1e3a47;
+            border: 2px solid #1e3a47;
+            color: #f5f2ed;
+            box-shadow: 0 8px 25px rgba(30, 58, 71, 0.2);
+        }
+
+        .featured-cta:hover {
+            background: #2a4a5a;
+            border-color: #2a4a5a;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(30, 58, 71, 0.3);
+        }
+
+        .pricing-guarantee {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, rgba(139, 105, 20, 0.1), rgba(30, 58, 71, 0.05));
+            border-radius: 15px;
+            border: 2px solid rgba(139, 105, 20, 0.2);
+            position: relative;
+        }
+
+        .pricing-guarantee::before {
+            content: '🛡️';
+            font-size: 3rem;
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f5f2ed;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .pricing-guarantee h3 {
+            color: #1e3a47;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            margin-top: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .pricing-guarantee p {
+            color: #1e3a47;
+            font-size: 1.1rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3a47, #2a4a5a);
+            color: #f5f2ed;
+            position: relative;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20 80 Q25 70 30 60 Q35 50 40 40 Q45 30 50 20' stroke='%23f5f2ed' stroke-width='0.3' fill='none' opacity='0.1'/%3E%3C/svg%3E") repeat;
+            opacity: 0.1;
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .final-cta .urgency-text {
+            font-size: 1.1rem;
+            color: #8b6914;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .cta-button {
+            background: #8b6914;
+            font-size: 1.3rem;
+            padding: 22px 50px;
+        }
+
+        .final-cta .cta-button:hover {
+            background: #a67c1a;
+        }
+
+        /* Exit Intent Popup */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-content {
+            background: #f5f2ed;
+            padding: 50px 40px;
+            border-radius: 15px;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #1e3a47;
+            font-weight: bold;
+        }
+
+        .popup-content h3 {
+            color: #1e3a47;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .popup-content p {
+            color: #4a5d6b;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .popup-cta {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #8b6914;
+            color: #f5f2ed;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .popup-cta:hover {
+            background: #a67c1a;
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .trust-logos {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .popup-content {
+                margin: 20px;
+                padding: 30px 25px;
+            }
+
+            .urgency-bar {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Urgency Bar -->
+    <div class="urgency-bar">
+        LIMITED TIME: Only 2 spots left for August 2025 
+        <span class="spots-left">2 SPOTS REMAINING</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                Lead Your Narrative
+            </div>
+            <div class="nav-links">
+                <a href="#pricing">Pricing</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-subtitle">In Just 90 Days</div>
+                    <h1>Transform Into A <span class="accent">Magnetic</span> Industry Authority</h1>
+                    <p>Turn executives, founders, and high-profile professionals into magnetic industry authorities by designing their public persona and narrative so they attract clients, investors, and opportunities effortlessly.</p>
+                    
+                    <div class="guarantee-note">
+                        100% Money-Back Guarantee: If you don't see measurable results in 90 days, we'll refund every penny.
+                    </div>
+                    
+                    <a href="https://wa.me/573017063936?text=Hi!%20I'm%20interested%20in%20transforming%20into%20a%20magnetic%20industry%20authority.%20I'd%20like%20to%20learn%20more%20about%20LYN's%20executive%20personal%20branding%20services." target="_blank" class="cta-button">Claim Your Strategy Session</a>
+                    
+                    <div class="risk-free">✓ Risk-Free 30-Minute Strategy Call</div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Executives Transformed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">$2.3B</div>
+                            <div class="stat-label">Capital Raised</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">89%</div>
+                            <div class="stat-label">Opportunity Increase</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-title">Featured In & Trusted By</div>
+            <div class="trust-logos">
+                <div class="trust-item">Forbes</div>
+                <div class="trust-item">Harvard Business Review</div>
+                <div class="trust-item">Wall Street Journal</div>
+                <div class="trust-item">Financial Times</div>
+                <div class="trust-item">CNBC</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trusted by Industry Leaders</h2>
+                <p>See how we've transformed executives into magnetic authorities in their industries</p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="review-card">
+                        <div class="review-content">
+                            "Within 6 months of working together, I went from being unknown in my industry to being invited to speak at 3 major conferences and receiving 5 acquisition offers. The personal branding transformation was beyond anything I imagined possible."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">MJ</div>
+                            <div class="author-info">
+                                <h4>Michael Johnson</h4>
+                                <p>CEO, TechVenture Corp</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            "The ROI was immediate and substantial. My LinkedIn following grew by 15,000 in 3 months, and I closed $2.3M in new business directly attributed to my enhanced personal brand. This investment paid for itself 50x over."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">SR</div>
+                            <div class="author-info">
+                                <h4>Sarah Rodriguez</h4>
+                                <p>Founder, Global Solutions Inc</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            "I was skeptical at first, but the results speak for themselves. Fortune 500 companies started reaching out to ME instead of the other way around. My speaking fees increased by 400%, and I'm now considered a thought leader in fintech."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">DL</div>
+                            <div class="author-info">
+                                <h4>David Liu</h4>
+                                <p>Managing Partner, Innovation Capital</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            "The transformation was remarkable. From struggling to get meetings to having investors approach me with term sheets. My personal brand became my most valuable business asset, opening doors I never knew existed."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">AK</div>
+                            <div class="author-info">
+                                <h4>Amanda Kim</h4>
+                                <p>Founder & CEO, BioTech Solutions</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            "In 8 months, I went from regional player to global influencer. Harvard Business Review reached out for quotes, CNBC invited me for expert commentary, and my company valuation doubled. This is the best investment I've ever made."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">RC</div>
+                            <div class="author-info">
+                                <h4>Robert Chen</h4>
+                                <p>CEO, NextGen Logistics</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            "The strategic positioning and narrative design was genius. I became the go-to expert in sustainable energy, landed a board position at a Fortune 100 company, and my personal brand generated over $10M in new opportunities."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">JM</div>
+                            <div class="author-info">
+                                <h4>Jennifer Martinez</h4>
+                                <p>Chief Strategy Officer, GreenTech Innovations</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            "From zero media presence to being featured in Wall Street Journal, Forbes, and Financial Times within 4 months. The personal branding strategy didn't just increase my visibility—it fundamentally changed how the market perceives me and my company."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">TW</div>
+                            <div class="author-info">
+                                <h4>Thomas Wilson</h4>
+                                <p>Founder, AI Dynamics</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Authority Transformation Process</h2>
+                <p>A proven system that turns professionals into magnetic industry leaders</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon">🎯</div>
+                    <h3>Strategic Positioning</h3>
+                    <p>We analyze your industry landscape and craft a unique positioning that makes you the obvious choice for opportunities and partnerships.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">📝</div>
+                    <h3>Narrative Design</h3>
+                    <p>Develop a compelling personal story and thought leadership content that resonates with your target audience and builds magnetic authority.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">🚀</div>
+                    <h3>Amplification Strategy</h3>
+                    <p>Execute across multiple channels to ensure your message reaches decision-makers, investors, and industry influencers at scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Transform Your Authority in 90 Days</h2>
+                <p>Choose your transformation level - Limited availability for personalized attention</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="limited-badge">2 LEFT</div>
+                    <div class="pricing-header">
+                        <h3>Executive Presence</h3>
+                        <p class="pricing-subtitle">Perfect for emerging leaders</p>
+                        <div class="original-price">$2,500 USD</div>
+                        <div class="price">$1,500 USD</div>
+                        <p class="price-note">One-time investment - August Special</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Persona Audit & Strategy Session (1-2 hrs)</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Signature Story Creation</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>LinkedIn & Bio Complete Overhaul</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Visual Branding Refresh</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>30-Day Authority Content Plan</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Branded PDF & Email Templates</span>
+                        </div>
+                        <div class="bonus-feature">
+                            <div class="feature">
+                                <span class="feature-bullet"></span>
+                                <span>BONUS: Crisis Communication Guide ($500 value)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/573017063936?text=Hi!%20I'm%20interested%20in%20the%20Executive%20Presence%20package.%20I'd%20like%20to%20learn%20more%20about%20transforming%20my%20professional%20brand%20and%20building%20executive%20presence." class="pricing-cta" target="_blank">Secure Your Spot</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="limited-badge">1 LEFT</div>
+                    <div class="pricing-header">
+                        <h3>Executive Transformation</h3>
+                        <p class="pricing-subtitle">Complete authority makeover</p>
+                        <div class="original-price">$5,500 USD</div>
+                        <div class="price">$3,500 USD</div>
+                        <p class="price-note">90-day transformation - August Special</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Everything in Executive Presence</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>90-Day Extended Content Strategy</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Done-for-You Posting (30 days)</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Professional Photo Session Coordination</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Speaker Kit & Investor Intro Materials</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Weekly Strategy Calls (12 total)</span>
+                        </div>
+                        <div class="bonus-feature">
+                            <div class="feature">
+                                <span class="feature-bullet"></span>
+                                <span>BONUS: Media Training Session ($1,200 value)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/573017063936?text=Hi!%20I'm%20interested%20in%20the%20Industry%20Authority%20package%20(Most%20Popular).%20I%20want%20the%20complete%20executive%20transformation%20and%20would%20like%20to%20discuss%20how%20this%20can%20elevate%20my%20industry%20positioning." class="pricing-cta featured-cta" target="_blank">Transform Now</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Influence Engine</h3>
+                        <p class="pricing-subtitle">Continuous thought leadership</p>
+                        <div class="price">Starting at $1,500 USD</div>
+                        <p class="price-note">Monthly retainer - 6 month minimum</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Monthly Ghostwriting & Content Creation</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Strategic Content Calendar</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Platform Management & Posting</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Monthly Performance Analytics</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Engagement Strategy & Response</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-bullet">•</span>
+                            <span>Quarterly Strategy Optimization</span>
+                        </div>
+                        <div class="bonus-feature">
+                            <div class="feature">
+                                <span class="feature-bullet"></span>
+                                <span>BONUS: Monthly Media Opportunities</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/573017063936?text=Hi!%20I'm%20interested%20in%20the%20Influence%20Engine%20monthly%20retainer.%20I%20want%20ongoing%20thought%20leadership%20content%20and%20would%20like%20to%20discuss%20how%20this%20can%20continuously%20amplify%20my%20influence." class="pricing-cta" target="_blank">Continue Growing</a>
+                </div>
+            </div>
+            
+            <div class="pricing-guarantee">
+                <h3>Iron-Clad Success Guarantee</h3>
+                <p><strong>Our Promise:</strong> Within 90 days, you'll see measurable increases in industry recognition, inbound opportunities, and executive presence - or we'll work for free until you do. Plus, our clients typically see 3-5x return on investment within 6 months through increased opportunities, speaking fees, and business growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <div class="final-cta-content">
+                <div class="urgency-text"> Only 2 Spots Remaining for August 2025 </div>
+                <h2>Ready to Become an Industry Authority?</h2>
+                <p>Join the ranks of executives who attract opportunities effortlessly through magnetic personal branding. Don't wait - spots fill fast.</p>
+                <a href="https://calendly.com/lead-your-narrative/30min" target="_blank" class="cta-button">Book Your Strategy Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exit Intent Popup -->
+    <div class="popup-overlay" id="exitPopup">
+        <div class="popup-content">
+            <span class="popup-close" id="closePopup">×</span>
+            <h3>Wait! Don't Leave Empty-Handed</h3>
+            <p>Get our <strong>FREE Executive Presence Audit</strong> (valued at $500) - discover exactly what's holding back your executive brand and get a personalized roadmap to authority.</p>
+            <a href="https://wa.me/573017063936?text=Hi!%20I%20saw%20the%20exit%20offer%20for%20the%20FREE%20Executive%20Presence%20Audit.%20I'd%20love%20to%20get%20my%20personalized%20roadmap%20to%20executive%20authority." class="popup-cta" target="_blank">Get My Free Audit</a>
+        </div>
+    </div>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.review-card');
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function updateCarousel() {
+            const cardWidth = 320 + 20; // card width + gap
+            const translateX = currentSlide * cardWidth;
+            track.style.transform = `translateX(-${translateX}px)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+
+        // Auto-advance carousel
+        setInterval(nextSlide, 5000);
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(245, 242, 237, 0.98)';
+            } else {
+                header.style.background = 'rgba(245, 242, 237, 0.95)';
+            }
+        });
+
+        // Countdown timer for urgency
+        let spotsLeft = 2;
+        const spotCounter = document.querySelector('.spots-left');
+        
+        // Simulate spot reduction every 15 minutes (for demo purposes)
+        setInterval(() => {
+            if (spotsLeft > 0) {
+                spotsLeft--;
+                spotCounter.textContent = `${spotsLeft} SPOTS REMAINING`;
+                if (spotsLeft === 0) {
+                    spotCounter.textContent = 'WAITLIST ONLY';
+                    spotCounter.style.background = 'rgba(220, 38, 38, 0.3)';
+                }
+            }
+        }, 900000); // 15 minutes
+
+        // Exit intent popup
+        let exitIntentTriggered = false;
+        
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY <= 0 && !exitIntentTriggered) {
+                exitIntentTriggered = true;
+                document.getElementById('exitPopup').style.display = 'flex';
+            }
+        });
+
+        // Close popup
+        document.getElementById('closePopup').addEventListener('click', function() {
+            document.getElementById('exitPopup').style.display = 'none';
+        });
+
+        // Close popup when clicking overlay
+        document.getElementById('exitPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+
+        // Track scroll depth for analytics (optional)
+        let maxScroll = 0;
+        window.addEventListener('scroll', () => {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            maxScroll = Math.max(maxScroll, scrollPercent);
+        });
+    </script>
+</body>
+</html>
+                    
