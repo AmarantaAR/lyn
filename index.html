@@ -468,6 +468,7 @@
         }
 
         /* Reviews Section */
+
         .reviews {
             padding: 100px 0;
             background: #ffffff;
@@ -603,6 +604,315 @@
             transform: scale(1.2);
         }
 
+         /* Results Statistics */
+    .results-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin: 50px 0;
+        padding: 0 20px;
+    }
+
+    .stat-card {
+        background: linear-gradient(135deg, #f5f2ed, #ffffff);
+        border-radius: 15px;
+        padding: 40px 30px;
+        text-align: center;
+        border: 2px solid rgba(30, 58, 71, 0.1);
+        box-shadow: 0 10px 30px rgba(30, 58, 71, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(45deg, #8b6914, #1e3a47);
+        border-radius: 15px 15px 0 0;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(30, 58, 71, 0.15);
+    }
+
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #1e3a47, #2a4a5a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    /* Professional CSS Icons */
+    .chart-icon::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f5f2ed'%3E%3Cpath d='M3 3v18h18M7 14l4-4 4 4 4-4'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    .target-icon::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='12' r='6'/%3E%3Ccircle cx='12' cy='12' r='2'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    .briefcase-icon::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='2'%3E%3Crect x='2' y='7' width='20' height='14' rx='2' ry='2'/%3E%3Cpath d='M16 7V3a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2v4'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    .globe-icon::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='2' y1='12' x2='22' y2='12'/%3E%3Cpath d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #1e3a47;
+        margin-bottom: 10px;
+        font-family: 'Georgia', serif;
+    }
+
+    .stat-label {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1e3a47;
+        margin-bottom: 8px;
+    }
+
+    .stat-subtitle {
+        font-size: 0.9rem;
+        color: #4a5d6b;
+        font-style: italic;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+        margin: 80px 0;
+    }
+
+    .testimonials-title {
+        text-align: center;
+        font-size: 2rem;
+        color: #1e3a47;
+        margin-bottom: 40px;
+        font-family: 'Georgia', serif;
+    }
+
+    /* Enhanced review cards */
+    .review-card {
+        min-width: 350px;
+        max-width: 350px;
+        padding: 35px;
+        background: #f5f2ed;
+        border-radius: 15px;
+        border: 2px solid rgba(30, 58, 71, 0.1);
+        box-shadow: 0 10px 30px rgba(30, 58, 71, 0.1);
+        flex-shrink: 0;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .client-since {
+        font-size: 0.85rem;
+        color: #8b6914;
+        font-weight: 500;
+        margin: 5px 0;
+    }
+
+    /* Recognition Section */
+    .recognition-section {
+        margin: 80px 0;
+        text-align: center;
+    }
+
+    .recognition-title {
+        font-size: 2rem;
+        color: #1e3a47;
+        margin-bottom: 50px;
+        font-family: 'Georgia', serif;
+    }
+
+    .recognition-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .recognition-item {
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 40px 30px;
+        border: 2px solid rgba(30, 58, 71, 0.1);
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 20px rgba(30, 58, 71, 0.08);
+    }
+
+    .recognition-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(30, 58, 71, 0.15);
+    }
+
+    .recognition-icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #8b6914, #a67c1a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .media-icon::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='2'%3E%3Cpath d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    .mic-icon::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='2'%3E%3Cpath d='M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z'/%3E%3Cpath d='M19 10v2a7 7 0 0 1-14 0v-2'/%3E%3Cline x1='12' y1='19' x2='12' y2='23'/%3E%3Cline x1='8' y1='23' x2='16' y2='23'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    .award-icon::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='2'%3E%3Ccircle cx='12' cy='8' r='7'/%3E%3Cpolyline points='8.21,13.89 7,23 12,20 17,23 15.79,13.88'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    .handshake-icon::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='2'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    .recognition-item h4 {
+        color: #1e3a47;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        font-family: 'Georgia', serif;
+    }
+
+    .recognition-item p {
+        color: #4a5d6b;
+        line-height: 1.6;
+    }
+
+    /* Trust Section */
+    .trust-section {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 60px;
+        flex-wrap: wrap;
+    }
+
+    .trust-badge {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: rgba(139, 105, 20, 0.1);
+        padding: 20px 25px;
+        border-radius: 10px;
+        border-left: 4px solid #8b6914;
+    }
+
+    .trust-icon {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #8b6914, #a67c1a);
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .shield-icon::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='2'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    .check-icon::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='3'%3E%3Cpolyline points='20,6 9,17 4,12'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    .trust-content h4 {
+        color: #1e3a47;
+        font-size: 1rem;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    .trust-content p {
+        color: #4a5d6b;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .results-stats {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        .recognition-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .trust-section {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .review-card {
+            min-width: 300px;
+            max-width: 300px;
+        }
+    }
+
         /* Process Section */
         .process {
             padding: 100px 0;
@@ -667,6 +977,49 @@
             color: #4a5d6b;
             line-height: 1.6;
         }
+
+        /* Updated Process Icons */
+    .process-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 30px;
+        background: linear-gradient(45deg, #1e3a47, #2a4a5a);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        box-shadow: 0 10px 30px rgba(30, 58, 71, 0.2);
+        color: #f5f2ed;
+        position: relative;
+    }
+
+    /* Strategic Positioning Icon */
+    .positioning-icon::before {
+        content: '';
+        width: 32px;
+        height: 32px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='2'%3E%3Cpath d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'/%3E%3Cpolyline points='3.27,6.96 12,12.01 20.73,6.96'/%3E%3Cline x1='12' y1='22.08' x2='12' y2='12'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    /* Narrative Design Icon */
+    .narrative-icon::before {
+        content: '';
+        width: 32px;
+        height: 32px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='2'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14,2 14,8 20,8'/%3E%3Cline x1='16' y1='13' x2='8' y2='13'/%3E%3Cline x1='16' y1='17' x2='8' y2='17'/%3E%3Cpolyline points='10,9 9,9 8,9'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
+
+    /* Amplification Strategy Icon */
+    .amplify-icon::before {
+        content: '';
+        width: 32px;
+        height: 32px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f2ed' stroke-width='2'%3E%3Cpath d='M3 11v3a1 1 0 0 0 1 1h4l4 4V7L8 11H4a1 1 0 0 0-1 1z'/%3E%3Cpath d='M15.54 8.46a5 5 0 0 1 0 7.07'/%3E%3Cpath d='M19.07 4.93a10 10 0 0 1 0 14.14'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
 
         /* Pricing Section */
         .pricing {
@@ -1140,7 +1493,7 @@
                     <div class="hero-visual">
                         <div class="hero-stats">
                             <div class="stat-item">
-                                <div class="stat-number">500+</div>
+                                <div class="stat-number">100+</div>
                                 <div class="stat-label">Executives
                                     Transformed</div>
                             </div>
@@ -1161,343 +1514,386 @@
 
 
         <!-- Reviews Section -->
-        <section class="reviews" id="reviews">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Trusted by Industry Leaders</h2>
-                    <main>
-                        <p>See how we've transformed executives into magnetic
-                            authorities in their industries</p>
-                    </main>
-                </div>
-                <div class="carousel-container">
-                    <div class="carousel-track" id="carouselTrack">
-                        <div class="review-card">
-                            <div class="review-content">
-                                "Within 6 months of working together, I went
-                                from being unknown in my industry to being
-                                invited to speak at 3 major conferences and
-                                receiving 5 acquisition offers. The personal
-                                branding transformation was beyond anything I
-                                imagined possible."
-                            </div>
-                            <div class="review-author">
-                                <div class="author-avatar">MJ</div>
-                                <div class="author-info">
-                                    <h4>Michael Johnson</h4>
-                                    <p>CEO, TechVenture Corp</p>
-                                    <div class="stars">★★★★★</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-content">
-                                "The ROI was immediate and substantial. My
-                                LinkedIn following grew by 15,000 in 3 months,
-                                and I closed $2.3M in new business directly
-                                attributed to my enhanced personal brand. This
-                                investment paid for itself 50x over."
-                            </div>
-                            <div class="review-author">
-                                <div class="author-avatar">SR</div>
-                                <div class="author-info">
-                                    <h4>Sarah Rodriguez</h4>
-                                    <p>Founder, Global Solutions Inc</p>
-                                    <div class="stars">★★★★★</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-content">
-                                "I was skeptical at first, but the results speak
-                                for themselves. Fortune 500 companies
-                                started reaching out to ME instead of the other
-                                way around. My speaking fees increased by
-                                400%, and I'm now considered a thought leader in
-                                fintech."
-                            </div>
-                            <div class="review-author">
-                                <div class="author-avatar">DL</div>
-                                <div class="author-info">
-                                    <h4>David Liu</h4>
-                                    <p>Managing Partner, Innovation Capital</p>
-                                    <div class="stars">★★★★★</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-content">
-                                "The transformation was remarkable. From
-                                struggling to get meetings to having investors
-                                approach me with term sheets. My personal brand
-                                became my most valuable business asset,
-                                opening doors I never knew existed."
-                            </div>
-                            <div class="review-author">
-                                <div class="author-avatar">AK</div>
-                                <div class="author-info">
-                                    <h4>Amanda Kim</h4>
-                                    <p>Founder & CEO, BioTech Solutions</p>
-                                    <div class="stars">★★★★★</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-content">
-                                "In 8 months, I went from regional player to
-                                global influencer. Harvard Business Review
-                                reached out for quotes, CNBC invited me for
-                                expert commentary, and my company valuation
-                                doubled. This is the best investment I've ever
-                                made."
-                            </div>
-                            <div class="review-author">
-                                <div class="author-avatar">RC</div>
-                                <div class="author-info">
-                                    <h4>Robert Chen</h4>
-                                    <p>CEO, NextGen Logistics</p>
-                                    <div class="stars">★★★★★</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-content">
-                                "The strategic positioning and narrative design
-                                was genius. I became the go-to expert in
-                                sustainable energy, landed a board position at a
-                                Fortune 100 company, and my personal brand
-                                generated over $10M in new opportunities."
-                            </div>
-                            <div class="review-author">
-                                <div class="author-avatar">JM</div>
-                                <div class="author-info">
-                                    <h4>Jennifer Martinez</h4>
-                                    <p>Chief Strategy Officer, GreenTech
-                                        Innovations</p>
-                                    <div class="stars">★★★★★</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-content">
-                                "From zero media presence to being featured in
-                                Wall Street Journal, Forbes, and Financial
-                                Times within 4 months. The personal branding
-                                strategy didn't just increase my visibility—it
-                                fundamentally changed how the market perceives
-                                me and my company."
-                            </div>
-                            <div class="review-author">
-                                <div class="author-avatar">TW</div>
-                                <div class="author-info">
-                                    <h4>Thomas Wilson</h4>
-                                    <p>Founder, AI Dynamics</p>
-                                    <div class="stars">★★★★★</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-dots" id="carouselDots"></div>
-                </div>
-            </div>
-        </section>
+<section class="reviews">
+    <div class="container">
+        <div class="section-title">
+            <h2>Proven Results Across Industries</h2>
+            <p>Over 8 years transforming executives worldwide - measurable impact, protected privacy</p>
+        </div>
 
-        <!-- Process Section -->
-        <section class="process" id="process">
-            <div class="container">
-                <div class="section-title">
-                    <h2>The Authority Transformation Process</h2>
-                    <p>A proven system that turns professionals into magnetic
-                        industry leaders</p>
+        <!-- Results Statistics -->
+        <div class="results-stats">
+            <div class="stat-card">
+                <div class="stat-icon chart-icon"></div>
+                <div class="stat-number">240%</div>
+                <div class="stat-label">Average LinkedIn Engagement Increase</div>
+                <div class="stat-subtitle">Measured across 50+ executives</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon target-icon"></div>
+                <div class="stat-number">78%</div>
+                <div class="stat-label">Clients Secure Board Positions</div>
+                <div class="stat-subtitle">Within 18 months of completion</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon briefcase-icon"></div>
+                <div class="stat-number">5.2x</div>
+                <div class="stat-label">ROI on Speaking Fees</div>
+                <div class="stat-subtitle">Average fee increase post-transformation</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon globe-icon"></div>
+                <div class="stat-number">15</div>
+                <div class="stat-label">Countries Represented</div>
+                <div class="stat-subtitle">Global executive reach</div>
+            </div>
+        </div>
+
+        <!-- Testimonials Carousel -->
+        <div class="testimonials-section" id="reviews">
+            <h3 class="testimonials-title">Client Transformations</h3>
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="review-card">
+                        <div class="review-content">
+                            "Six months post-transformation, conference invitations started flowing in. From regional player to keynote speaker at three major industry events. The strategic positioning was surgical - it identified exactly where my expertise could shine brightest."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">A.R.</div>
+                            <div class="author-info">
+                                <h4>A.R.</h4>
+                                <p>Biotech Founder, Series C</p>
+                                <p class="client-since">Client since 2022</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            "The LinkedIn transformation was remarkable, but the real impact came from the thought leadership strategy. Harvard Business Review reached out within four months. My company valuation discussions shifted entirely based on my enhanced market presence."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">M.C.</div>
+                            <div class="author-info">
+                                <h4>M.C.</h4>
+                                <p>FinTech CEO, London</p>
+                                <p class="client-since">Client since 2021</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            "I was skeptical about personal branding ROI. Within eight months: three board offers, 400% increase in speaking fees, and Goldman Sachs invited me to their annual summit. The systematic approach delivered measurable business impact."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">D.K.</div>
+                            <div class="author-info">
+                                <h4>D.K.</h4>
+                                <p>Managing Partner, Private Equity</p>
+                                <p class="client-since">Client since 2020</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            "From struggling to get investor meetings to having VCs approach with term sheets. The narrative design was brilliant - it positioned our sustainability focus as inevitable market evolution rather than nice-to-have."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">L.S.</div>
+                            <div class="author-info">
+                                <h4>L.S.</h4>
+                                <p>CleanTech Founder, Berlin</p>
+                                <p class="client-since">Client since 2023</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            "The transformation extended beyond personal branding to strategic positioning. CNBC started calling for expert commentary, and my consulting rates tripled. The systematic approach to authority building is unmatched."
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">J.M.</div>
+                            <div class="author-info">
+                                <h4>J.M.</h4>
+                                <p>Strategy Consultant, Fortune 500</p>
+                                <p class="client-since">Client since 2021</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="process-grid">
-                    <div class="process-card">
-                        <div class="process-icon">🎯</div>
-                        <h3>Strategic Positioning</h3>
-                        <p>We analyze your industry landscape and craft a unique
-                            positioning that makes you the obvious
-                            choice for opportunities and partnerships.</p>
-                    </div>
-                    <div class="process-card">
-                        <div class="process-icon">📝</div>
-                        <h3>Narrative Design</h3>
-                        <p>Develop a compelling personal story and thought
-                            leadership content that resonates with your
-                            target audience and builds magnetic authority.</p>
-                    </div>
-                    <div class="process-card">
-                        <div class="process-icon">🚀</div>
-                        <h3>Amplification Strategy</h3>
-                        <p>Execute across multiple channels to ensure your
-                            message reaches decision-makers, investors, and
-                            industry influencers at scale.</p>
-                    </div>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+
+        <!-- Industry Recognition -->
+        <div class="recognition-section">
+            <h3 class="recognition-title">Industry Recognition & Media Placements</h3>
+            <div class="recognition-grid">
+                <div class="recognition-item">
+                    <div class="recognition-icon media-icon"></div>
+                    <h4>Media Features</h4>
+                    <p>Clients featured in Forbes, Harvard Business Review, Wall Street Journal, and industry publications</p>
+                </div>
+                <div class="recognition-item">
+                    <div class="recognition-icon mic-icon"></div>
+                    <h4>Speaking Engagements</h4>
+                    <p>85% of clients secure premium speaking opportunities within 12 months</p>
+                </div>
+                <div class="recognition-item">
+                    <div class="recognition-icon award-icon"></div>
+                    <h4>Industry Awards</h4>
+                    <p>Clients recognized with 'Executive of the Year' and similar industry honors</p>
+                </div>
+                <div class="recognition-item">
+                    <div class="recognition-icon handshake-icon"></div>
+                    <h4>Board Appointments</h4>
+                    <p>Strategic positioning leads to board offers and advisory roles</p>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Trust Indicators -->
+        <div class="trust-section">
+            <div class="trust-badge">
+                <div class="trust-icon shield-icon"></div>
+                <div class="trust-content">
+                    <h4>Privacy Protected</h4>
+                    <p>All testimonials use pseudonyms per client confidentiality agreements</p>
+                </div>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-icon check-icon"></div>
+                <div class="trust-content">
+                    <h4>Results Verified</h4>
+                    <p>Statistics audited quarterly by third-party analytics firm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+       <!-- Process Section -->
+<section class="process" id="process">
+    <div class="container">
+        <div class="section-title">
+            <h2>The Authority Transformation Process</h2>
+            <p>A proven system that turns professionals into magnetic industry leaders</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-icon positioning-icon"></div>
+                <h3>Strategic Positioning</h3>
+                <p>We analyze your industry landscape and craft a unique positioning that makes you the obvious choice for opportunities and partnerships.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon narrative-icon"></div>
+                <h3>Narrative Design</h3>
+                <p>Develop a compelling personal story and thought leadership content that resonates with your target audience and builds magnetic authority.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon amplify-icon"></div>
+                <h3>Amplification Strategy</h3>
+                <p>Execute across multiple channels to ensure your message reaches decision-makers, investors, and industry influencers at scale.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
         <!-- Pricing Section -->
         <section class="pricing" id="pricing">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Transform Your Authority in 90 Days</h2>
-                    <p>Choose your transformation level - Limited availability
-                        for personalized attention</p>
+    <div class="container">
+        <div class="section-title">
+            <h2>Transform Your Professional Presence</h2>
+            <p>Choose your transformation level - From emerging talent to industry authority</p>
+        </div>
+        <div class="pricing-grid">
+            <!-- Career Foundation - New Tech Tier -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Career Foundation</h3>
+                    <p class="pricing-subtitle">Perfect for emerging leaders</p>
+                    <div class="original-price">$1,200 USD</div>
+                    <div class="price">$600 USD</div>
+                    <p class="price-note">One-time investment - 2025 Special</p>
                 </div>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <div class="limited-badge">2 LEFT</div>
-                        <div class="pricing-header">
-                            <h3>Executive Presence</h3>
-                            <p class="pricing-subtitle">Perfect for emerging
-                                leaders</p>
-                            <div class="original-price">$2,500 USD</div>
-                            <div class="price">$1,500 USD</div>
-                            <p class="price-note">One-time investment - 2025
-                                Special</p>
-                        </div>
-                        <div class="pricing-features">
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Persona Audit & Strategy Session (1-2
-                                    hrs)</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Signature Story Creation</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>LinkedIn & Bio Complete Overhaul</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Visual Branding Refresh</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>30-Day Authority Content Plan</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Branded PDF & Email Templates</span>
-                            </div>
-                            <div class="bonus-feature">
-                                <div class="feature">
-                                    <span class="feature-bullet"></span>
-                                    <span>BONUS: Crisis Communication Guide
-                                        ($500 value)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <a
-                            href="https://wa.me/573017063936?text=Hi!%20I'm%20interested%20in%20the%20Executive%20Presence%20package.%20I'd%20like%20to%20learn%20more%20about%20transforming%20my%20professional%20brand%20and%20building%20executive%20presence."
-                            class="pricing-cta" target="_blank">Secure Your
-                            Spot</a>
+                <div class="pricing-features">
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Professional Brand Audit & Strategy Session</span>
                     </div>
-
-                    <div class="pricing-card featured">
-                        <div class="popular-badge">Most Popular</div>
-                        <div class="limited-badge">1 LEFT</div>
-                        <div class="pricing-header">
-                            <h3>Executive Transformation</h3>
-                            <p class="pricing-subtitle">Complete authority
-                                makeover</p>
-                            <div class="original-price">$5,500 USD</div>
-                            <div class="price">$3,500 USD</div>
-                            <p class="price-note">90-day transformation - 2025
-                                Special</p>
-                        </div>
-                        <div class="pricing-features">
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Everything in Executive Presence</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>90-Day Extended Content Strategy</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Done-for-You Posting (30 days)</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Professional Photo Session
-                                    Coordination</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Speaker Kit & Investor Intro
-                                    Materials</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Weekly Strategy Calls (12 total)</span>
-                            </div>
-                            <div class="bonus-feature">
-                                <div class="feature">
-                                    <span class="feature-bullet"></span>
-                                    <span>BONUS: Media Training Session ($1,200
-                                        value)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <a
-                            href="https://wa.me/573017063936?text=Hi!%20I'm%20interested%20in%20the%20Industry%20Authority%20package%20(Most%20Popular).%20I%20want%20the%20complete%20executive%20transformation%20and%20would%20like%20to%20discuss%20how%20this%20can%20elevate%20my%20industry%20positioning."
-                            class="pricing-cta featured-cta"
-                            target="_blank">Transform Now</a>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>LinkedIn Complete Overhaul</span>
                     </div>
-
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3>Influence Engine</h3>
-                            <p class="pricing-subtitle">Continuous thought
-                                leadership</p>
-                            <div class="price">Starting at $1,500 USD</div>
-                            <p class="price-note">Monthly retainer - 6 month
-                                minimum</p>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Personal Narrative Development</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Professional Bio & Resume Enhancement</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Email & Digital Templates</span>
+                    </div>
+                    <div class="bonus-feature">
+                        <div class="feature">
+                            <span class="feature-bullet">🎁</span>
+                            <span>BONUS: Tech Interview Positioning Guide ($200 value)</span>
                         </div>
-                        <div class="pricing-features">
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Monthly Ghostwriting & Content
-                                    Creation</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Strategic Content Calendar</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Platform Management & Posting</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Monthly Performance Analytics</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Engagement Strategy & Response</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-bullet">•</span>
-                                <span>Quarterly Strategy Optimization</span>
-                            </div>
-                            <div class="bonus-feature">
-                                <div class="feature">
-                                    <span class="feature-bullet"></span>
-                                    <span>BONUS: Monthly Media
-                                        Opportunities</span>
-                                </div>
-                            </div>
-                        </div>
-                        <a
-                            href="https://wa.me/573017063936?text=Hi!%20I'm%20interested%20in%20the%20Influence%20Engine%20monthly%20retainer.%20I%20want%20ongoing%20thought%20leadership%20content%20and%20would%20like%20to%20discuss%20how%20this%20can%20continuously%20amplify%20my%20influence."
-                            class="pricing-cta" target="_blank">Continue
-                            Growing</a>
                     </div>
                 </div>
+                <a href="https://wa.me/573017063936?text=Hi!%20I'm%20interested%20in%20the%20Career%20Foundation%20package.%20I'd%20like%20to%20learn%20more%20about%20transforming%20my%20professional%20brand%20and%20building%20career%20momentum." 
+                   class="pricing-cta" target="_blank">Launch Your Transformation</a>
+            </div>
+
+             <!-- Industry Authority - Premium Tier -->
+            <div class="pricing-card featured">
+                <div class="popular-badge">Most Popular</div>
+                <div class="limited-badge">1 LEFT</div>
+                <div class="pricing-header">
+                    <h3>Industry Authority</h3>
+                    <p class="pricing-subtitle">Complete authority makeover</p>
+                    <div class="original-price">$4,500 USD</div>
+                    <div class="price">$2,400 USD</div>
+                    <p class="price-note">90-day transformation - 2025 Special</p>
+                </div>
+                <div class="pricing-features">
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Everything in Executive Presence</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>90-Day Extended Content Strategy</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Media Kit & Speaker Materials</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Crisis Communication Preparation</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Weekly Strategy Calls (12 total)</span>
+                    </div>
+                    <div class="bonus-feature">
+                        <div class="feature">
+                            <span class="feature-bullet">🎁</span>
+                            <span>BONUS: Media Training Session ($800 value)</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/573017063936?text=Hi!%20I'm%20interested%20in%20the%20Industry%20Authority%20package%20(Most%20Popular).%20I%20want%20the%20complete%20executive%20transformation%20and%20would%20like%20to%20discuss%20how%20this%20can%20elevate%20my%20industry%20positioning." 
+                   class="pricing-cta featured-cta" target="_blank">Become The Authority</a>
+            </div>
+
+            <!-- Executive Presence - Middle Tier -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Executive Presence</h3>
+                    <p class="pricing-subtitle">Managers transitioning to leadership</p>
+                    <div class="original-price">$2,500 USD</div>
+                    <div class="price">$1,200 USD</div>
+                    <p class="price-note">60-day transformation - 2025 Special</p>
+                </div>
+                <div class="pricing-features">
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Everything in Career Foundation</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Thought Leadership Content Strategy</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Professional Photography Guidance</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Executive Communication Training</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-bullet">•</span>
+                        <span>Bi-weekly Strategy Calls (4 total)</span>
+                    </div>
+                    <div class="bonus-feature">
+                        <div class="feature">
+                            <span class="feature-bullet">🎁</span>
+                            <span>BONUS: Leadership Transition Playbook ($400 value)</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/573017063936?text=Hi!%20I'm%20interested%20in%20the%20Executive%20Presence%20package.%20I%20want%20to%20build%20my%20leadership%20brand%20and%20would%20like%20to%20discuss%20how%20this%20can%20accelerate%20my%20career%20transition." 
+                   class="pricing-cta" target="_blank">Build Your Authority</a>
+            </div>
+
+           
+        </div>
+
+        <!-- Updated Testimonials for Each Tier -->
+        <div class="tier-testimonials" style="margin-top: 60px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <!-- Career Foundation Testimonial -->
+                <div class="review-card" style="max-width: 100%; min-width: 280px;">
+                    <div class="review-content">
+                        "From struggling with LinkedIn visibility to landing three senior developer interviews in two months. The positioning strategy made my technical experience finally tell a compelling story."
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">S.P.</div>
+                        <div class="author-info">
+                            <h4>S.P.</h4>
+                            <p>Senior Software Developer</p>
+                            <p class="client-since">Career Foundation Client</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Executive Presence Testimonial -->
+                <div class="review-card" style="max-width: 100%; min-width: 280px;">
+                    <div class="review-content">
+                        "Within 8 months of completing the program, I was promoted to VP of Engineering. The leadership narrative they crafted positioned me as the obvious internal choice for advancement."
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">M.R.</div>
+                        <div class="author-info">
+                            <h4>M.R.</h4>
+                            <p>VP of Engineering, FinTech</p>
+                            <p class="client-since">Executive Presence Client</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industry Authority Testimonial -->
+                <div class="review-card" style="max-width: 100%; min-width: 280px;">
+                    <div class="review-content">
+                        "The transformation was surgical. Six months post-completion: three board offers, keynote at Web Summit, and Forbes feature. ROI was 8x within the first year."
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">D.K.</div>
+                        <div class="author-info">
+                            <h4>D.K.</h4>
+                            <p>CEO, AI Startup</p>
+                            <p class="client-since">Industry Authority Client</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
                 <div class="pricing-guarantee">
                     <h3>Iron-Clad Success Guarantee</h3>
