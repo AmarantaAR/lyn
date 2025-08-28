@@ -508,7 +508,8 @@
             padding: 0 20px;
         }
 
-        .review-card {
+        .review-card,
+        .tier-review-card{
             min-width: 320px;
             max-width: 320px;
             padding: 30px;
@@ -522,7 +523,8 @@
             position: relative;
         }
 
-        .review-card::before {
+        .review-card::before,
+        .tier-review-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -533,7 +535,8 @@
             border-radius: 15px 15px 0 0;
         }
 
-        .review-card:hover {
+        .review-card:hover,
+        .tier-review-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 50px rgba(30, 58, 71, 0.2);
         }
@@ -1846,7 +1849,7 @@
         <div class="tier-testimonials" style="margin-top: 60px;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 <!-- Career Foundation Testimonial -->
-                <div class="review-card" style="max-width: 100%; min-width: 280px;">
+                <div class="tier-review-card" style="max-width: 100%; min-width: 280px;">
                     <div class="review-content">
                         "From struggling with LinkedIn visibility to landing three senior developer interviews in two months. The positioning strategy made my technical experience finally tell a compelling story."
                     </div>
@@ -1862,7 +1865,7 @@
                 </div>
 
                 <!-- Executive Presence Testimonial -->
-                <div class="review-card" style="max-width: 100%; min-width: 280px;">
+                <div class="tier-review-card" style="max-width: 100%; min-width: 280px;">
                     <div class="review-content">
                         "Within 8 months of completing the program, I was promoted to VP of Engineering. The leadership narrative they crafted positioned me as the obvious internal choice for advancement."
                     </div>
@@ -1878,7 +1881,7 @@
                 </div>
 
                 <!-- Industry Authority Testimonial -->
-                <div class="review-card" style="max-width: 100%; min-width: 280px;">
+                <div class="tier-review-card" style="max-width: 100%; min-width: 280px;">
                     <div class="review-content">
                         "The transformation was surgical. Six months post-completion: three board offers, keynote at Web Summit, and Forbes feature. ROI was 8x within the first year."
                     </div>
